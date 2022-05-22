@@ -220,5 +220,7 @@ Special thanks to theAIGuysCode for creating the backbone of this repository:
 ### Authors:
 
 Angeles, Sean Paul S.
+
 Libed, Jeremiah Ian Ross S.
+
 Toledo, Kristine Joy T.
