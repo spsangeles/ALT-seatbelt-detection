@@ -1,9 +1,9 @@
-#DRIVER AND PASSENGER SEAT BELT VIOLATION DETECTION USING DEEP LEARNING TECHNIQUES
+# DRIVER AND PASSENGER SEAT BELT VIOLATION DETECTION USING DEEP LEARNING TECHNIQUES
 
-#Step 1: Enabling GPU within your notebook
+## Step 1: Enabling GPU within your notebook
 You will want to enable GPU acceleration within your Colab notebook so that your YOLOv4 system will be able to process detections over 100 times faster than CPU.
 
-Steps:
+### Steps:
 
 i) Click **Edit** at top left of your notebook.
 
@@ -19,7 +19,7 @@ iii) Under 'Hardware Accelerator' select **GPU** and then hit **Save**.
 
 Your notebook should now have GPU enabled!
 
-#Step 2: Cloning and building the repo
+## Step 2: Cloning and building the repo
 
 The following cells will clone and build the ALT-seatbelt-detection repository.
 
@@ -47,12 +47,8 @@ To install for CPU-only, change it to 'requirements.txt' instead.
 assert False
 ```
 
-#Step 3: Mounting your Google Drive 
+## Step 3: Mounting your Google Drive 
 Here is how to mount your Google Drive root folder to this runtime. To be used for easy file transfers.
-
-
-
----
 
 
 First off, copy the contents of this Google Drive folder to the root of your Google Drive:
@@ -107,7 +103,7 @@ We copy the darknet weights into the cloned repo 'ALT-seatbelt-detection' into t
 assert False
 ```
 
-#Step 4: Converting the darknet weights
+## Step 4: Converting the darknet weights
 
 To implement YOLOv4 using TensorFlow, we convert the .weights into the corresponding TensorFlow model files and then run the model.
 
@@ -121,7 +117,7 @@ To implement YOLOv4 using TensorFlow, we convert the .weights into the correspon
 !python save_model.py --weights ./data/seatbelt.weights --output ./checkpoints/yolov4-416-sb --input_size 416 --model yolov4 
 ```
 
-#Step 5: Detection of Windshield
+## Step 5: Detection of Windshield
 
 *The first phase of detection is the windshield.*
 
@@ -153,7 +149,7 @@ Change **'./data/images/a (1).jpg'** to the image you would like to process. By 
 
 MATLAB is needed for the next part. (Step 6)
 
-#Step 6: Running MATLAB
+## Step 6: Running MATLAB
 
 This step requires that you have **MATLAB R2021a** or newer. We will be using a built-in function that can only be run on the app itself.
 
@@ -197,7 +193,7 @@ The cell below will copy the **'matlab-result'** folder from the drive into the 
 !ls /content/ALT-seatbelt-detection/data/matlab-result
 ```
 
-#Step 7: Detection of Seat belt
+## Step 7: Detection of Seat belt
 
 *The second phase of detection is the seat belt.*
 
@@ -216,14 +212,13 @@ Result will be in **'ALT-seatbelt-detection/detections/crop'**.
 !python detect.py --weights ./checkpoints/yolov4-416-sb --size 416 --model yolov4 --images ./data/matlab-result/windshield_1_output.jpg
 ```
 
-#Thanks!
+### References
 
----
+Special thanks to theAIGuysCode for creating the backbone of this repository:
+* [yolov4-custom-functions](https://github.com/theAIGuysCode/yolov4-custom-functions)
 
-Creators:
+### Authors:
 
 Angeles, Sean Paul S.
-
 Libed, Jeremiah Ian Ross S.
-
 Toledo, Kristine Joy T.
