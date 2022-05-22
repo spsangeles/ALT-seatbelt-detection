@@ -1,8 +1,9 @@
 # DRIVER AND PASSENGER SEAT BELT VIOLATION DETECTION USING DEEP LEARNING TECHNIQUES
 
 ## Before you get started
-i) Download [ALT_YOLOv4_fuzzy-logic.ipynb](https://github.com/spsangeles/ALT-seatbelt-detection/blob/main/ALT_YOLOv4_fuzzy-logic.ipynb), paste it into your Google Drive, then open it from there.
+Download [ALT_YOLOv4_fuzzy-logic.ipynb](https://github.com/spsangeles/ALT-seatbelt-detection/blob/main/ALT_YOLOv4_fuzzy-logic.ipynb), paste it into your Google Drive, then open it from there.
 
+The rest of the instructions can be followed from using the notebook alone.
 
 ## Step 1: Enabling GPU within your notebook
 You will want to enable GPU acceleration within your Colab notebook so that your YOLOv4 system will be able to process detections over 100 times faster than CPU.
